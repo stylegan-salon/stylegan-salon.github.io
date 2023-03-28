@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<!--     <meta name="google-site-verification" content="RRBnwYbS4fA-miRhlvTT9lm9uJrWSHPbv_-4PYUiH2M" /> -->
+    <!-- Swiper CSS -->
+<!--         <link rel="stylesheet" href="./swiper/css/swiper-bundle.min.css"> -->
+
+        <!-- Google tag (gtag.js) -->
+        <script async="" src="./js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+<!--         <script src="./swiper/js/reshadow.js"></script>
+        <script src="./swiper/js/relight.js"></script>
+        <script src="./swiper/js/move_light.js"></script> -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-XB3PR2Y1TQ');
+        </script>
+    <title>Zero-guideSeg</title>
+    <link rel="stylesheet" href="assets/scripts/bulma.min.css">
+    <style>
+      .black-frame{
+        height: 100%;
+        background: #171617;
+        width: 100%;
+        display : flex;
+        align-items : center;
+        justify-content: center;
+      }
+      .card {
+      margin: 10px;
+      }
+
+      .card .media-content .title,
+      .card .media-content .subtitle {
+        color: #4a4a4a;
+      }
+
+      .subtitle {
+        margin-top: -0.8rem !important;
+      }
+
+      .card-footer {
+        text-align: center;
+      }
+
+      h1.title {
+        font-size: 30px;
+        margin-bottom: 10px !important;
+      }
+
+      h1 {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .author {
+        display: inline;
+        margin: 15px;
+        color: #3376cb;
+      }
+      .contrib {
+        font-size: 12px;
+      }
+      .aff {
+        margin-top: 20px;
+        font-size: 18px;
+      }.head_cap {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+      .location {
+        font-size: 16px;
+      }
+
+      .hero-body {
+        padding: 20px;
+      }
+
+      .column {
+        padding: 0px !important;
+      }
+      .subtitle {
+        padding-top: 5px;
+        font-size: 16px;
+      }
+
+      .hero {
+        background-color: inherit !important;
+      }
+
+      @media only screen and (max-width: 600px) {
+      .author {
+        font-size: 12px;
+      }
+      .aff {
+        font-size: 12px;
+      }
+      .location {
+        font-size: 12px;
+      }}
+
+      .button-clipboard-tooltip{
+        display: none;
+        color:white;
+        background: rgba(74,74,74,0.9);
+        border-radius: 2px;
+        padding: 0.5rem 1rem;
+        margin-right: 1rem;
+        text-overflow: ellipsis;
+        white-space: pre;
+    }
+
+      body {
+        background-color: #FAFAFA;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero is-light" style="">
+      <div class="hero-body" style="padding-top: 50px;">
+        <div class="container" style="text-align: center;margin-bottom:5px;">
+          <h1 class="title">
+            StyleGAN Salon: Multi-View Latent Optimization for Pose-Invariant Hairstyle Transfer
+          </h1>
+
+          <div class="author">Sasikarn Khwanmuang<sup>1</sup></div>
+          <div class="author">Pakkapon Phongthawee<sup>1</sup></div>
+          <div class="author">Patsorn Sangkloy<sup>2</sup></div>
+          <div class="author"><a href="http://www.supasorn.com">Supasorn Suwajanakorn</a><sup>1</sup></div>
+          <div class="columns"><div class="column"></div>
+
+          <div class="column">
+           <div class="aff">
+            <p style="color: gray; --darkreader-inline-color:#988f81;" data-darkreader-inline-color="">
+            VISTEC<sup>1</sup>
+<!--               VISTEC - Vidyasirimedhi Institute of Science and Technology<sup>1</sup> -->
+            </p>
+          </div>
+          <div class="location">
+            <p style="color: gray; --darkreader-inline-color:#988f81;" data-darkreader-inline-color="">
+            Rayong, Thailand
+            </p>
+          </div>
+          </div><div class="column">
+          <div class="aff">
+            <p style="color: gray; --darkreader-inline-color:#988f81;" data-darkreader-inline-color="">
+            Phranakhon Rajabhat University<sup>2</sup>
+            </p>
+          </div>
+          <div class="location">
+            <p style="color: gray; --darkreader-inline-color:#988f81;" data-darkreader-inline-color="">
+            Bangkok, Thailand
+            </p>
+          </div></div>
+          <div class="column"></div>
+          </div>
+          <div class="con">
+            <p  style="font-size: 24px; margin-top:15px;">
+<!--             CVPR 2021 (Oral) -->
+<!--               Under review -->
+            </p>
+          </div>
+          <div class="contrib">
+            *Equal contribution
+          </div>
+        </div>
+      </div>
+    </section>
+<!--     <section class="section" style="display : flex; align-items : center;justify-content: center;padding: 10px;">
+    <div style="max-width:  900px;width: 900px;">
+      <div style="position: relative;width: 100%;height: 0;padding-bottom: 56.25%;">
+        <iframe height="506.25" width="900"
+          style=" position: absolute;top: 0;left: 0;width: 100%;height: 100%;max-height: 100%; max-width: 100%;"
+          src="https://www.youtube.com/embed/Jx49VwN7O0Q" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section> -->
+      <center>
+        <img src="assets/images/cvpr_teaser.png" width="1000px" height="1000px">
+        <div class="head_cap">
+            <p style="color:gray;font-size: 14px;margin-bottom:0.5cm;">
+            <b>Zero-guidance Segmentation</b> segments input images and generated text labels for all segments without any guidance or prompting. <br>
+            Our method produces these results using only pretrained networks with no fine-tuning or annotations
+            </p>
+        </div>
+      </center>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="">Abstract</h1>
+          <p  style="text-align: justify; font-size: 17px;margin-bottom:0.5cm;">
+            Our paper seeks to transfer the hairstyle of a reference image to an input photo for virtual hair try-on. We target a variety of challenges scenarios, such as transforming a long hairstyle with bangs to a pixie cut, which requires removing the existing hair and inferring how the forehead would look, or transferring partially visible hair from a hat-wearing person in a different pose.
+            Past solutions leverage StyleGAN for hallucinating any missing parts and producing a seamless face-hair composite through so-called GAN inversion or projection.
+            However, there remains a challenge in controlling the hallucinations to accurately transfer hairstyle and preserve the face shape and identity of the input.
+            To overcome this, we propose a multi-view optimization framework that uses "two different views" of reference composites to semantically guide occluded or ambiguous regions. Our optimization shares information between two poses, which allows us to produce high fidelity and realistic results from incomplete references. Our framework produces high-quality results and outperforms prior work in a user study that consists of significantly more challenging hair transfer scenarios than previously studied.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="">Overview of StyleGAN Salon</h1>
+          <p  style="text-align: justify; font-size: 17px;margin-bottom:0.1cm;">
+            We first align the input face $I_f$ and reference hair $I_h$ and use them to construct guide images $\iguide$, in two different viewpoints, which specifies the target appearance for each output region.
+
+          </p>
+        </div>
+      </div>
+    </section>
+    <center>
+        <img src="assets/images/overview.png" width="850px" height="850px">
+      </center>
+
+    <!-- <section class="hero is-light" style="">
+      <div class="hero-body">
+        <div class="container" style="text-align: center;margin-top:1cm;">
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column">
+              <a href="https://arxiv.org/abs/2303.13396.pdf" target="_blank">
+                <div>
+                  <img src="assets/images/paper.png" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3); border-radius: 5px; padding: 5px;" width="40%" height="40%">
+                </div>
+                <p style="color:#3376cb;">Paper</p>
+              </a>
+            </div>
+            <div class="column"></div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="hero is-light" style="background-color:#FFFFFF;">
+      <div class="hero-body">
+        <div class="container" style="max-width:800px;margin-bottom:20px;">
+          <h1>
+            Zero-guidance Segmentation Results
+          </h1>
+        </div></div>
+      </section>
+    <center>
+        <img src="assets/images/cvpr_teaser_longer.png" width="850px" height="850px">
+        <img src="assets/images/cvpr_teaser_longer_ffhq.png" width="850px" height="850px">
+      </center>
+
+
+
+  <!-- <section class="hero" style="padding-top:0px;">
+    <div class="hero-body">
+      <div class="container" style="max-width:900px;">
+  <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      BibTex
+    </p>
+    <a class="card-header-icon button-clipboard" style="border:0px; background: inherit;" data-clipboard-target="#bibtex-info" >
+      <div class="button-clipboard-tooltip">Copied!</div>
+      <span class="icon">
+        <img src="assets/images/copy.svg" style="height: 20px;"/>
+      </span>
+    </a>
+  </header>
+    <div class="card-content">
+<pre style="background-color:inherit;padding: 0px;" id="bibtex-info">@inproceedings{Rewatbowornwong2023ZeroGuideSeg,
+    author = {Rewatbowornwong, Pitchaporn and Chatthee, Nattanat and Chuangsuwanich, Ekapol and Suwajanakorn, Supasorn},
+    title = {Zero-guidance Segmentation Using Zero Segment Labels},
+    booktitle = {arXiv},
+    year = {2023},
+}</pre>
+    </div></div></div></div>
+    </section> -->
+
+
+<!--     <section class="hero">
+    <div class="hero-body">
+      <div class="container" style="max-width:900px;">
+        <div class=" col-max-width container">
+          <h1 class="title shead">
+            Another project from our lab
+          </h1>
+
+          <a href="http://repurposegans.github.io/" target="_blank">
+            <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    Repurposing GANs for One-shot Semantic Part Segmentation
+                  </p>
+                  <p class="card-header-icon" aria-label="more options">
+                    CVPR 2021 (Oral)
+                  </p>
+                </header>
+                <div class="card-content">
+                  <div class="content">
+                    <img src="assets/images/reproposed_gan.png" />
+                  </div>
+                </div>
+              </div>
+          </a>
+      </div>
+     </div>
+    </div>
+  </section> -->
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="width: 400px">
+          <div class="columns" style="text-align: center;">
+            <div class="column">
+              <a href="https://vistec.ist/vision" target="_blank">Vision & Learning Lab</a>
+            </div>
+            <div class="column">
+              <a href="https://www.vistec.ac.th/" target="_blank">VISTEC</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRZRM1ZZ9J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-QRZRM1ZZ9J');
+    </script>
+     <script src="assets/scripts/clipboard.min.js"></script>
+  <script>
+    var clipboard = new ClipboardJS('.button-clipboard');
+    function setTooltip(){
+      var tooltip = document.querySelector('.button-clipboard-tooltip');
+      tooltip.style.display = 'block';
+    }
+    function hideTooltip(){
+      var tooltip = document.querySelector('.button-clipboard-tooltip');
+      tooltip.style.display = 'none';
+    }
+    clipboard.on('success', function(e) {
+      setTooltip(e.trigger, 'Copied!');
+      setTimeout(function(){
+        hideTooltip(e.trigger);
+      }, 2000);
+
+    });
+
+  </script>
+  </body>
+</html>
