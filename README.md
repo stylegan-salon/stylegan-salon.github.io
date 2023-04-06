@@ -1,2 +1,2 @@
-# Zero-guidance Segmentation Using Zero Segment Labels
-Website for Zero-guidance Segmentation Using Zero Segment Labels
+# StyleGAN Salon: Multi-View Latent Optimization for Pose-Invariant Hairstyle Transfer
+Website for StyleGAN Salon: Multi-View Latent Optimization for Pose-Invariant Hairstyle Transfer
